@@ -35,7 +35,15 @@ var styles = {
     alignItems: 'center',
     background: 'rgba(252, 90, 44, 0.89)',
     color: '#fff',
-    padding: '5px'  
+    padding: '5px'
+  },
+  headerForm: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    maxWidth: '300px',
+    alignSelf: 'right'
   }
 };
 
