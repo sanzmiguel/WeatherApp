@@ -2,7 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var styles = require('../styles/styles');
 var Header = require('./Header');
-var SearchForm = require('./SearchForm');
+var SearchFormContainer = require('../containers/SearchFormContainer');
 
 function Home(){
   return (
@@ -10,7 +10,7 @@ function Home(){
       <Header/>
       <div style={styles.container}>
         <h1 style={styles.entryText}>Enter a City and State</h1>
-        <SearchForm styles={styles.formControls}/>
+        <SearchFormContainer styles={styles.formControls}/>
       </div>
     </div>
   );
