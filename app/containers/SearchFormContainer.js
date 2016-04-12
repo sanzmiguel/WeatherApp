@@ -1,5 +1,6 @@
 var React = require('react');
 var SearchForm = require('../components/SearchForm');
+var weatherHelpers = require('../utils/weatherHelpers');
 
 var SearchFormContainer = React.createClass({
   contextTypes: {
@@ -16,7 +17,9 @@ var SearchFormContainer = React.createClass({
     });
   },
   handleSubmitCity: function(event){
-    console.log(this.state.city)
+    weatherHelpers.getCurrentWeather(this.state.city).then(function(info){
+      console.log(info);
+    });
   },
   render: function(){
     return (
