@@ -9,7 +9,7 @@ var helpers = {
     }).catch(function(err){console.log(err)});
   },
   getForecastWeather: function (city) {
-    return axios.get('http://api.openweathermap.org/data/2.5/forecast?q=' + city +'&appid=' + api_key)
+    return axios.get('http://api.openweathermap.org/data/2.5/forecast/daily?q=' + city +'&appid=' + api_key)
     .then(function(info){
       return info.data;
     }).catch(function(err){console.log(err)});
