@@ -17,9 +17,10 @@ var SearchFormContainer = React.createClass({
     });
   },
   handleSubmitCity: function(event){
-    weatherHelpers.getCurrentWeather(this.state.city).then(function(info){
+    /*weatherHelpers.getCurrentWeather(this.state.city).then(function(info){
       console.log(info);
-    });
+    });*/
+    this.context.router.push('/forecast/' + this.state.city)
   },
   render: function(){
     return (
