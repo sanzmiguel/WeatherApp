@@ -9,9 +9,11 @@ var helpers = {
     }).catch(function(err){console.log(err)});
   },
   getForecastWeather: function (city) {
-    return axios.get('http://api.openweathermap.org/data/2.5/forecast/daily?q=' + city +'&appid=' + api_key)
+    return axios.get('http://api.openweathermap.org/data/2.5/forecast/daily?q=' + city +'&cnt=5&&appid=' + api_key)
     .then(function(info){
-      return info.data;
+      return info.data.list.map(function(weather){
+        return weather;
+      });
     }).catch(function(err){console.log(err)});
   }
 };
