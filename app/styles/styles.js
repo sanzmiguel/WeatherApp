@@ -44,6 +44,41 @@ var styles = {
     alignItems: 'center',
     maxWidth: '300px',
     alignSelf: 'right'
+  },
+  forecastContainer: {
+    textAlign: 'center'
+  },
+  forecastTittle: {
+    fontSize: '65px',
+    color: '#333',
+    fontWeight: '100',
+    textAlign: 'center',
+    marginTop: '50px',
+    marginBottom: '30px'
+  },
+  forecastText: {
+    fontSize: '30px',
+    color: '#333',
+    fontWeight: '100'
+  },
+  dayContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    margin: '35px'
+  },
+  imageHeight: {
+    height: '130px'
+  },
+  daysContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    maxWidth: '1200px',
+    margin: '50px auto'
   }
 };
 

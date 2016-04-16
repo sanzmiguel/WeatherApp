@@ -17,6 +17,7 @@ var SearchFormContainer = React.createClass({
     });
   },
   handleSubmitCity: function(event){
+    event.preventDefault();
     this.context.router.push('/forecast/' + this.state.city)
   },
   render: function(){

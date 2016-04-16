@@ -8,21 +8,30 @@ var ForecastContainer = React.createClass({
   },
   getInitialState: function () {
     return {
-      isLoading: true
+      isLoading: true,
+      data: []
     }
   },
   componentDidMount: function () {
     var city = this.props.routeParams.city;
+    this.makeRequest(city);
+  },
+  componentWillReceiveProps: function (nextProps) {
+    this.makeRequest(nextProps.routeParams.city)
+  },
+  makeRequest(city){
     weatherHelpers.getForecastWeather(city).then(function(info){
-      console.log(info);
       this.setState({
-        isLoading: false
+        isLoading: false,
+        data: info
       });
     }.bind(this));
   },
   render: function(){
     return (
-      <Forecast isLoading = {this.state.isLoading} />
+      <Forecast isLoading={this.state.isLoading}
+        city={this.props.routeParams.city}
+        data={this.state.data}/>
     );
   }
 });

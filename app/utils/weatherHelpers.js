@@ -15,6 +15,15 @@ var helpers = {
         return weather;
       });
     }).catch(function(err){console.log(err)});
+  },
+  getDate(timestamp){
+    var date = new Date(timestamp * 1000);
+    var weekDay = date.getDay();
+    var day = date.getDate();
+    var month = date.getMonth();
+    var daysNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return daysNames[weekDay] + ', ' + monthNames[month] + ' ' + day;
   }
 };
 
