@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var DayItem = require('./DayItem');
+var DayItemContainer = require('../containers/DayItemContainer');
 var styles = require('../styles/styles');
 
 function ForecastUI(props){
@@ -10,7 +10,7 @@ function ForecastUI(props){
       <p style={styles.forecastText}>Select a day</p>
       <div style={styles.daysContainer}>
         {props.data.map(function(info) {
-          return <DayItem key={info.dt} data={info}/>;
+          return <DayItemContainer key={info.dt} data={info} city={props.city}/>;
         })}
       </div>
     </div>
