@@ -16,7 +16,7 @@ function DayItem(props){
 }
 
 DayItem.propTypes = {
-  onDetailCity: PropTypes.func.isRequired,
+  onDetailCity: PropTypes.func,
   data: PropTypes.object.isRequired
 }
 

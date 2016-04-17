@@ -79,6 +79,13 @@ var styles = {
     flexWrap: 'wrap',
     maxWidth: '1200px',
     margin: '50px auto'
+  },
+  detailContainer: {
+    fontSize: '34px',
+    fontWeight: '100',
+    maxWidth: '400px',
+    margin: '0 auto',
+    textAlign: 'center'
   }
 };
 

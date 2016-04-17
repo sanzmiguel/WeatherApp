@@ -17,7 +17,9 @@ var DetailContainer = React.createClass({
     return (
       <div>
         <Header/>
-        <Detail details={this.props.location.state.details}/>
+        <Detail
+          details={this.props.location.state.details}
+          city={this.props.routeParams.city}/>
       </div>
     );
   }

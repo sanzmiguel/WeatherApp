@@ -1,5 +1,6 @@
 var React = require('react');
 var Forecast = require('../components/Forecast');
+var Header = require('../components/Header');
 var weatherHelpers = require('../utils/weatherHelpers');
 
 var ForecastContainer = React.createClass({
@@ -29,9 +30,12 @@ var ForecastContainer = React.createClass({
   },
   render: function(){
     return (
-      <Forecast isLoading={this.state.isLoading}
-        city={this.props.routeParams.city}
-        data={this.state.data}/>
+      <div>
+        <Header/>
+        <Forecast isLoading={this.state.isLoading}
+          city={this.props.routeParams.city}
+          data={this.state.data}/>
+      </div>
     );
   }
 });
